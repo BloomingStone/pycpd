@@ -33,11 +33,11 @@ class ConstrainedDeformableRegistration(DeformableRegistration):
             raise ValueError(
                 "Expected a positive value for regularization parameter e_alpha. Instead got: {}".format(e_alpha))
         
-        if type(source_id) is not np.ndarray or source_id.ndim != 1:
+        if not isinstance(source_id, np.ndarray) or source_id.ndim != 1:
             raise ValueError(
                 "The source ids (source_id) must be a 1D numpy array of ints.")
         
-        if type(target_id) is not np.ndarray or target_id.ndim != 1:
+        if not isinstance(target_id, np.ndarray) or target_id.ndim != 1:
             raise ValueError(
                 "The target ids (target_id) must be a 1D numpy array of ints.")
 

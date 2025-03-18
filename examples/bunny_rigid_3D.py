@@ -33,7 +33,7 @@ def main(save=False):
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
 
-    callback = partial(visualize, ax=ax, fig=fig, save_fig=save[0] if type(save) is list else save)
+    callback = partial(visualize, ax=ax, fig=fig, save_fig=save[0] if isinstance(save, list) else save)
 
     reg = RigidRegistration(**{'X': X, 'Y': Y})
     reg.register(callback)

@@ -161,11 +161,11 @@ class EMRegistration(object):
     &#34;&#34;&#34;
 
     def __init__(self, X, Y, sigma2=None, max_iterations=None, tolerance=None, w=None, *args, **kwargs):
-        if type(X) is not np.ndarray or X.ndim != 2:
+        if not isinstance(X, np.ndarray) or X.ndim != 2:
             raise ValueError(
                 &#34;The target point cloud (X) must be at a 2D numpy array.&#34;)
 
-        if type(Y) is not np.ndarray or Y.ndim != 2:
+        if not isinstance(Y, np.ndarray) or Y.ndim != 2:
             raise ValueError(
                 &#34;The source point cloud (Y) must be a 2D numpy array.&#34;)
 
@@ -543,11 +543,11 @@ Multiplication result between P and a column vector of all 1s.</dd>
     &#34;&#34;&#34;
 
     def __init__(self, X, Y, sigma2=None, max_iterations=None, tolerance=None, w=None, *args, **kwargs):
-        if type(X) is not np.ndarray or X.ndim != 2:
+        if not isinstance(X, np.ndarray) or X.ndim != 2:
             raise ValueError(
                 &#34;The target point cloud (X) must be at a 2D numpy array.&#34;)
 
-        if type(Y) is not np.ndarray or Y.ndim != 2:
+        if not isinstance(Y, np.ndarray) or Y.ndim != 2:
             raise ValueError(
                 &#34;The source point cloud (Y) must be a 2D numpy array.&#34;)
 
